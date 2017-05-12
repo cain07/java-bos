@@ -7,4 +7,11 @@
   </parent>
   <artifactId>bao-dao</artifactId>
   <description>存放持久层代码</description>
+  <dependencies>
+  	<dependency>
+  		<groupId>com.cain</groupId>
+  		<artifactId>bos-utils</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
 </project>

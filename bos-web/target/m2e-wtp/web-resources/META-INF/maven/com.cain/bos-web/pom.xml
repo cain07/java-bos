@@ -8,4 +8,12 @@
   <artifactId>bos-web</artifactId>
   <packaging>war</packaging>
   <description>存放页面</description>
+  
+  <dependencies>
+  	<dependency>
+  		<groupId>com.cain</groupId>
+  		<artifactId>bos-service</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
 </project>

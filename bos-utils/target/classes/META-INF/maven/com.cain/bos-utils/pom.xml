@@ -7,4 +7,11 @@
   </parent>
   <artifactId>bos-utils</artifactId>
   <description>自工程 存放工具类</description>
+  <dependencies>
+  	<dependency>
+  		<groupId>com.cain</groupId>
+  		<artifactId>bos-domain</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
 </project>
