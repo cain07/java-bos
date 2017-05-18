@@ -42,4 +42,9 @@ public class UserAction extends BaseAction<User>{
 		}
 	
 	}
+	
+	public String logout(){
+		ServletActionContext.getRequest().getSession().invalidate();
+		return LOGIN;
+	}
 }

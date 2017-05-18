@@ -9,6 +9,22 @@
 	 -->
 	<package name="basicstruts2" extends="struts-default">
 		<!-- 需要进行权限控制的页面访问 -->
+		
+		<!-- 注册自定义拦截器 -->
+		<interceptors>
+			<interceptor name="bosLoginInterceptor" class="com.cain.bos.interceptor.BOSLoginInterceptor">
+				<param name="excludeMethods">login</param>
+			</interceptor>
+			<interceptor-stack name="mystack">
+				<interceptor-ref name="bosLoginInterceptor"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="mystack"></default-interceptor-ref>
+		<!-- 全局结果集定义 -->
+		<global-results>
+			<result name="login">/login.jsp</result>
+		</global-results>
 		<action name="page_*_*">
 			<result type="dispatcher">/WEB-INF/pages/{1}/{2}.jsp</result>
 		</action>
@@ -17,5 +33,8 @@
 			<result name="login">/login.jsp</result>
 			<result name="home">/index.jsp</result>
 		</action>
+		
+		
+		
 	</package>
 </struts>
