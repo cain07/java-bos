@@ -6,4 +6,6 @@ public interface IUserDao {
 
 	User findUserByUsernameAndPassword(String username, String password);
 
+	void executeUpdate(String string, Object... object);
+
 }

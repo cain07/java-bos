@@ -23,4 +23,11 @@ public class UserService implements IUserService{
 		return iUserDao.findUserByUsernameAndPassword(model.getUsername(),password);
 	}
 
+	@Override
+	public void editPassword(String id, String password) {
+		// TODO Auto-generated method stub
+		String md5 = MD5Utils.md5(password);
+		iUserDao.executeUpdate("user.editpassword",md5,id);
+	}
+
 }
