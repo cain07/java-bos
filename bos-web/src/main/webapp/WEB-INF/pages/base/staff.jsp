@@ -170,18 +170,29 @@
 					<tr class="title">
 						<td colspan="2">收派员信息</td>
 					</tr>
-					<!-- TODO 这里完善收派员添加 table -->
-					<tr>
-						<td>取派员编号</td>
-						<td><input type="text" name="id" class="easyui-validatebox" required="true"/></td>
-					</tr>
 					<tr>
 						<td>姓名</td>
 						<td><input type="text" name="name" class="easyui-validatebox" required="true"/></td>
 					</tr>
 					<tr>
 						<td>手机</td>
-						<td><input type="text" name="telephone" class="easyui-validatebox" required="true"/></td>
+						<td>
+							<script type="text/javascript">
+							$(function(){
+								var reg = /^1[3|4|5|7|8][0-9]{9}$/;
+								//扩展手机号校验规则
+								$.extend($.fn.validatebox.defaults.rules, { 
+									telephone: { 
+										validator: function(value,param){ 
+										return reg.test(value);
+									}, 
+										message: '手机号输入有误！' 
+									}
+									}); 
+								});
+
+							</script>
+						<input type="text" data-options="validType:'telephone'" name="telephone" class="easyui-validatebox" required="true"/></td>
 					</tr>
 					<tr>
 						<td>单位</td>

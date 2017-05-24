@@ -2,7 +2,7 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="com.itheima.bos.domain.Region" table="bc_region" >
+    <class name="com.cain.bos.domain.Region" table="bc_region" >
         <id name="id" type="java.lang.String">
             <column name="id" length="32" />
             <generator class="assigned" />
@@ -29,7 +29,7 @@
             <key>
                 <column name="region_id" length="32" />
             </key>
-            <one-to-many class="com.itheima.bos.domain.Subarea" />
+            <one-to-many class="com.cain.bos.domain.Subarea" />
         </set>
     </class>
 </hibernate-mapping>

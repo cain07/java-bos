@@ -2,12 +2,12 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="com.itheima.bos.domain.Decidedzone" table="bc_decidedzone" >
+    <class name="com.cain.bos.domain.Decidedzone" table="bc_decidedzone" >
         <id name="id" type="java.lang.String">
             <column name="id" length="32" />
             <generator class="assigned" />
         </id>
-        <many-to-one name="staff" class="com.itheima.bos.domain.Staff" fetch="select">
+        <many-to-one name="staff" class="com.cain.bos.domain.Staff" fetch="select">
             <column name="staff_id" length="32" />
         </many-to-one>
         <property name="name" type="java.lang.String">
@@ -17,7 +17,7 @@
             <key>
                 <column name="decidedzone_id" length="32" />
             </key>
-            <one-to-many class="com.itheima.bos.domain.Subarea" />
+            <one-to-many class="com.cain.bos.domain.Subarea" />
         </set>
     </class>
 </hibernate-mapping>
