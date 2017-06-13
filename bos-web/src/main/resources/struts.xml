@@ -34,6 +34,10 @@
 			<result name="home">/index.jsp</result>
 		</action>
 		
+		<action name="staffAction_*" class="staffAction" method="{1}">
+			<result name="list">/WEB-INF/pages/base/staff.jsp</result>
+		</action>
+		
 		<action name="testAction" class="testAction" method="{1}"></action>
 		
 	</package>
