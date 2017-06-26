@@ -20,6 +20,7 @@ public class StaffService implements IStaffService {
 	@Override
 	public void add(Staff model) {
 		// TODO Auto-generated method stub
+		System.out.println(model.toString());
 		staffDao.save(model);
 	}
 

@@ -110,4 +110,11 @@ public class Staff implements java.io.Serializable {
 		this.decidedzones = decidedzones;
 	}
 
+	@Override
+	public String toString() {
+		return "Staff [id=" + id + ", name=" + name + ", telephone=" + telephone + ", haspda=" + haspda + ", deltag="
+				+ deltag + ", station=" + station + ", standard=" + standard + ", decidedzones=" + decidedzones + "]";
+	}
+
+	
 }

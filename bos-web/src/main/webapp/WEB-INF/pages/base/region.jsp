@@ -23,6 +23,7 @@
 	src="${pageContext.request.contextPath }/js/easyui/ext/jquery.portal.js"></script>
 <script type="text/javascript"
 	src="${pageContext.request.contextPath }/js/easyui/ext/jquery.cookie.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath }/js/jquery.ocupload-1.1.2.js"></script>
 <script
 	src="${pageContext.request.contextPath }/js/easyui/locale/easyui-lang-zh_CN.js"
 	type="text/javascript"></script>
@@ -116,6 +117,10 @@
 			onDblClickRow : doDblClickRow
 		});
 		
+		$('#button-import').upload({
+			action:'regionAction_importXml.action',
+			name:'regionFile'
+		});
 		// 添加、修改区域窗口
 		$('#addRegionWindow').window({
 	        title: '添加修改区域',
